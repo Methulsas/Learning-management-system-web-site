@@ -1,0 +1,50 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(45, 51, 107, 0.6); /* #2D336B with opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.overlay p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.arrow {
+  margin-top: 40px;
+  font-size: 2em;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Categories - LMS</title>
+  <link rel="stylesheet" href="courses.css" />
+</head>
+<body>
+  <!-- Glassmorphism Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="courses.html"><img src="image\icons8-student-50.png" alt="logo 1" /></a></div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="loging.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Course Categories</h1>
+      <p>Choose from our comprehensive range of courses</p>
+    </div>
+
+    <!-- Course Categories Grid -->
+    <div class="courses-grid">
+      <!-- Artificial Intelligence -->
+      <div class="course-card" data-course="ai">
+        <div class="course-icon ai-icon"></div>
+        <h3 class="course-title">Artificial Intelligence</h3>
+        <p class="course-description">Master AI fundamentals and advanced techniques</p>
+        <div class="course-count">25 courses available</div>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="course-card" data-course="cybersecurity">
+        <div class="course-icon cyber-icon"></div>
+        <h3 class="course-title">Cybersecurity</h3>
+        <p class="course-description">Protect digital assets and learn security protocols</p>
+        <div class="course-count">18 courses available</div>
+      </div>
+
+      <!-- Data Analysis -->
+      <div class="course-card" data-course="data">
+        <div class="course-icon data-icon"></div>
+        <h3 class="course-title">Data Analysis</h3>
+        <p class="course-description">Analyze data and extract meaningful insights</p>
+        <div class="course-count">32 courses available</div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="course-card" data-course="web">
+        <div class="course-icon web-icon"></div>
+        <h3 class="course-title">Web Development</h3>
+        <p class="course-description">Build modern web applications and websites</p>
+        <div class="course-count">45 courses available</div>
+      </div>
+
+      <!-- Database -->
+      <div class="course-card" data-course="database">
+        <div class="course-icon db-icon"></div>
+        <h3 class="course-title">Database</h3>
+        <p class="course-description">Design and manage database systems</p>
+        <div class="course-count">22 courses available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Details Modal -->
+  <div id="courseModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeModal">&times;</span>
+      
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Course Title</h2>
+        <p class="modal-subtitle" id="modalSubtitle">Course Description</p>
+      </div>
+
+      <div class="course-details" id="courseDetailsContent">
+        <!-- Course details will be populated by JavaScript -->
+      </div>
+
+      <div class="course-features">
+        <h3 class="features-title">Course Features:</h3>
+        <div id="courseFeatures">
+          <!-- Features will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="price" id="coursePrice">$249</div>
+        <div class="price-note">One-time payment • Lifetime access</div>
+      </div>
+
+      <button class="register-btn" id="registerBtn">Register for Course</button>
+    </div>
+  </div>
+
+  <!-- Registration Modal -->
+  <div id="registrationModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeRegistrationModal">&times;</span>
+      
+      <div class="modal-header">
+        <h2 class="modal-title">Course Registration</h2>
+      </div>
+
+      <form id="registrationForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Full Name <span class="required">*</span></label>
+            <input type="text" class="form-input" name="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Email <span class="required">*</span></label>
+            <input type="email" class="form-input" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Country <span class="required">*</span></label>
+            <input type="text" class="form-input" name="country" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Age <span class="required">*</span></label>
+            <input type="number" class="form-input" name="age" min="16" max="100" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Phone Number <span class="required">*</span></label>
+            <input type="tel" class="form-input" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">School/University</label>
+            <input type="text" class="form-input" name="school">
+          </div>
+          
+          <div class="form-group full-width">
+            <label class="form-label">Payment Method <span class="required">*</span></label>
+            <select class="form-input" name="payment" required>
+              <option value="">Select Payment Method</option>
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+              <option value="cryptocurrency">Cryptocurrency</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="background: #f7fafc; padding: 20px; border-radius: 15px; margin: 20px 0; text-align: center;">
+          <div style="color: #4a5568; margin-bottom: 10px;">Course Price:</div>
+          <div id="registrationPrice" style="font-size: 2rem; font-weight: bold; color: #667eea;">$249</div>
+        </div>
+
+        <button type="submit" class="register-btn">Complete Registration</button>
+      </form>
+
+      <div id="successMessage" class="success-message">
+        🎉 Registration successful! Welcome to our learning community!
+      </div>
+    </div>
+  </div>
+
+ <script src="courses.js"></script>
+</body>
+</html>
